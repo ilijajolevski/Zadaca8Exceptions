@@ -1,5 +1,7 @@
 package fikt.edu.mk;
 
+import organizacija.lugje.Student;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,5 +16,13 @@ public class Main {
             System.out.println("Ne mozam da napravam covek so tolku godini");
             System.out.println(greskata.toString());
         }
+
+        Student s;
+        try {
+             s = new Student(20,"ime", "prez", 99);
+        } catch (NevalidniGodiniException e) {
+            e.printStackTrace();
+        }
+
     }
 }
